@@ -1,19 +1,6 @@
 {
   "file": "./models/playlists.json",
   "playlists": [
-    {
-      "title": "yeah",
-      "_id": "5e98f679-b635-45db-b7fb-12b222efc691"
-    },
-    {
-      "title": "tset listplay",
-      "userid": "2f36e4bf-a731-40d0-a984-ea9db882f4bd",
-      "_id": "5b3ec6c1-7035-461f-babd-1da13c40d96f"
-    },
-    {
-      "title": "test playlist",
-      "userid": "c199baf2-940b-4215-b5ec-4c30c1638628",
-      "_id": "222ec8fd-9d69-48f6-9a42-ec62889d7c92"
-    }
+
   ]
 }

@@ -16,5 +16,5 @@ app.set("views", "./views");
 app.use("/", router);
 
 const listener = app.listen(process.env.PORT || 4000, function () {
-  console.log(`Todolist started on http://localhost:${listener.address().port}`);
+  console.log(`WeatherTop web app (by Caoimhín Arnott) started on http://localhost:${listener.address().port}`);
 });
