@@ -1,61 +1,6 @@
 {
   "file": "./models/tracks.json",
   "tracks": [
-    {
-      "title": "barf",
-      "artist": "barf",
-      "duration": null,
-      "_id": "34c905bd-1866-48dd-b8fd-dcc30085d956",
-      "playlistid": "16418efb-0a15-402e-a859-dd79799fb0ae"
-    },
-    {
-      "title": "yes",
-      "artist": "yes",
-      "duration": null,
-      "_id": "9ea5b15f-191f-4e61-addb-2d47ef3f01bc",
-      "playlistid": "16418efb-0a15-402e-a859-dd79799fb0ae"
-    },
-    {
-      "title": "test",
-      "artist": "test",
-      "duration": 5,
-      "_id": "30710f96-bb9c-4d8e-903b-6edc90f0217b",
-      "playlistid": "16418efb-0a15-402e-a859-dd79799fb0ae"
-    },
-    {
-      "title": "boop",
-      "artist": "boop",
-      "duration": 5,
-      "_id": "782cd95f-d310-4328-bf91-d06ffa3f4038",
-      "playlistid": "9e446995-41aa-46e8-a448-b1c21672d56e"
-    },
-    {
-      "title": "yeah",
-      "artist": "yeah",
-      "duration": 5,
-      "_id": "3ff32658-324b-4b23-bfe1-6d7beeef5cab",
-      "playlistid": "03c30026-fef3-4616-9d05-8148bfad3d80"
-    },
-    {
-      "title": "test",
-      "artist": "test",
-      "duration": 4,
-      "_id": "6a03e430-c96b-41c3-b59e-40970fffe8bc",
-      "playlistid": "222ec8fd-9d69-48f6-9a42-ec62889d7c92"
-    },
-    {
-      "title": "tset",
-      "artist": "tset",
-      "duration": 5,
-      "_id": "72bc11a1-8ae9-4a44-9240-6415c7b28689",
-      "playlistid": "222ec8fd-9d69-48f6-9a42-ec62889d7c92"
-    },
-    {
-      "title": "tet",
-      "artist": "tet",
-      "duration": 2,
-      "_id": "45a809f5-d4d8-436a-8504-0e170f8ab86c",
-      "playlistid": "222ec8fd-9d69-48f6-9a42-ec62889d7c92"
-    }
+
   ]
 }
