@@ -1,5 +1,5 @@
 {
-  "name": "playlist",
+  "name": "station",
   "version": "0.1.0",
   "description": "Simple Playlist Maker",
   "main": "server.js",
