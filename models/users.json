@@ -1,6 +1,26 @@
 {
   "file": "./models/users.json",
   "users": [
-
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test",
+      "password": "test",
+      "_id": "6ba0b619-db8a-492b-9d90-cb9fab3c1da8"
+    },
+    {
+      "firstName": "tset",
+      "lastName": "tset",
+      "email": "tset",
+      "password": "tset",
+      "_id": "c460008c-547f-4c26-af5c-a61916b2e7b9"
+    },
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test",
+      "password": "test",
+      "_id": "8d53be5d-a26f-4114-a55d-06fccee76730"
+    }
   ]
 }

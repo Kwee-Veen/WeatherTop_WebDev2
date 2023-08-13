@@ -21,6 +21,7 @@
 //       title: request.body.title,
 //       artist: request.body.artist,
 //       duration: Number(request.body.duration),
+//       time: ,
 //     };
 //     console.log(`Updating Track ${trackId} from Playlist ${playlistId}`);
 //     const track = await trackStore.getTrackById(trackId);
