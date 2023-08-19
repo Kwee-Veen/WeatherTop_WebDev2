@@ -1,22 +1,27 @@
 {{> welcome-menu active="login"}}
 
-<section class="section"> 
-  <h1 class="title">
-    Log In
-  </h1>
-  <form action="/authenticate" method="POST">
-    <div class="field">
-      <label class="label">Email</label>
-      <input class="input" type="text" placeholder="Enter Email" name="email">
+<section class="content box">
+  <div class="columns">
+    <div class="column is-6">
+      <form action="/authenticate" method="POST">
+        <h1 class="subtitle is-underlined">Log In</h1>
+        <br>
+        <div class="field">
+          <label class="label is-medium">Email:</label>
+          <input placeholder="test@test.com" name="email">
+        </div>
+        <div class="field">
+          <label class="label is-medium">Password:</label>
+          <input type="password" placeholder="test" name="password">
+        </div>
+        <br>
+        <button class="button is-link is-info">Login</button>
+      </form>
     </div>
-    <div class="field">
-      <label class="label">Password</label>
-      <input class="input" type="text" placeholder="Enter Password" name="password">
+    <div class="column is-6">
+      <figure class="image is-square">
+        <img src="https://cdn.glitch.global/a954a553-344c-45c4-ab75-9002fdc69939/weather2.jpg?v=1691579047407" alt="Road lined with trees, with fog in the distance">
+      </figure>
     </div>
-    <div class="field-is-grouped">
-      <button class="button is-link">
-        Submit
-      </button>
-    </div>
-  </form>
+  </div>
 </section>

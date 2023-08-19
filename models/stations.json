@@ -2,14 +2,72 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "test",
+      "title": "testjs",
+      "userid": "46cf9c45-c13f-46fd-b00c-f4b4c90b5907",
+      "_id": "f628e492-eb1e-4958-bc96-f2d99e98b5a2"
+    },
+    {
+      "title": "testlatlong2",
+      "latitude": "80",
+      "longitude": "80",
       "userid": "6ba0b619-db8a-492b-9d90-cb9fab3c1da8",
-      "_id": "5a0ca659-1319-45fa-a4b2-c7825817f554"
+      "_id": "d31723cc-3277-4c32-bb42-0ed49d7a2943"
+    },
+    {
+      "title": "testlatlong3",
+      "latitude": "70",
+      "longitude": "70",
+      "userid": "6ba0b619-db8a-492b-9d90-cb9fab3c1da8",
+      "_id": "b6b0d887-5d04-4a13-bfe9-4afed84df7c0"
+    },
+    {
+      "title": "tsetStation",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "1635be76-7496-4e11-8084-a11ba0f44612",
+      "_id": "f6621833-8205-46bb-830d-116d0d2440e7"
     },
     {
       "title": "tset",
-      "userid": "6ba0b619-db8a-492b-9d90-cb9fab3c1da8",
-      "_id": "a5bbc01b-2cc3-4ae1-8026-0be3350a0489"
+      "latitude": "500",
+      "longitude": "500",
+      "userid": "afc0d25e-a3d7-4f87-889e-8472532cc78e",
+      "_id": "f19e2417-dd60-4964-8309-ec4700c5b9e8"
+    },
+    {
+      "title": "tset",
+      "latitude": "999",
+      "longitude": "999",
+      "userid": "f9239913-a04e-49f0-b731-6260b12a66a4",
+      "_id": "30878177-b128-46ca-9957-f387cd568e8c"
+    },
+    {
+      "title": "tset",
+      "latitude": "456",
+      "longitude": "456",
+      "userid": "0bd9a5f6-8213-4d0d-9196-6a37a3fc21fc",
+      "_id": "c7466014-999f-4e36-8da4-94871dd2ab6c"
+    },
+    {
+      "title": "test",
+      "latitude": "999",
+      "longitude": "999",
+      "userid": "f7374a31-c4f1-4409-b953-67da94a5f2a4",
+      "_id": "4e2786f1-b9aa-43c5-85f1-30e152d5af11"
+    },
+    {
+      "title": "test",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
+      "_id": "73d75945-9088-47fe-9d4a-8c6119b9bb60"
+    },
+    {
+      "title": "tset",
+      "latitude": "900",
+      "longitude": "900",
+      "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
+      "_id": "0b3417ef-e6fa-4ee6-b7e3-ad74073ddc74"
     }
   ]
 }

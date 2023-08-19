@@ -1,5 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
+import { latestReadingStore } from "../models/latest-reading-store.js";
 
 export const dashboardController = {
   async index(request, response) {
@@ -16,6 +17,8 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const newStation = {
       title: request.body.title,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
       userid: loggedInUser._id,
     };
     console.log(`adding station ${newStation.title}`);

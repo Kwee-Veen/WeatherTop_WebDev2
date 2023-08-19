@@ -1,6 +1,9 @@
-<nav class="navbar mb-6">
+<nav class="navbar is-link">
   <div class="navbar-brand">
     {{> brand}}
+    <div class="navbar-item">
+      <a class="button is-tab is-large is-warning" href="/dashboard"> Weathertop </a>
+    </div>
   </div>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
@@ -8,6 +11,7 @@
         <div class="buttons">
           <a id="dashboard" class="button" href="/dashboard"> Dashboard </a>
           <a id="about" class="button" href="/about"> About </a>
+          <a id="accountdetails" class="button" href="/accountdetails">Account</a>
           <a id="logout" class="button" href="/logout">Logout</a>
         </div>
       </div>

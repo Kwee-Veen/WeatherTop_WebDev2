@@ -37,5 +37,15 @@ export const userStore = {
   async deleteAll() {
     db.data.users = [];
     await db.write();
+  },
+  
+  async updateUser(oldUserData, updatedUserData) {
+    await db.read();
+    const user = db.data.users.find((user) => user._id === oldUserData._id);
+    user.firstname = updatedUserData.firstname;
+    user.surname = updatedUserData.surname;
+    user.email = updatedUserData.email;
+    user.password = updatedUserData.password;
+    await db.write();
   }
 }
