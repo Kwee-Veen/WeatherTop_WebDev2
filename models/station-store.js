@@ -1,6 +1,7 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 import { readingStore } from "./reading-store.js";
+import { latestReadingStore } from "./latest-reading-store.js";
 
 const db = initStore("stations");
 
@@ -13,6 +14,7 @@ export const stationStore = {
   async addStation(station) {
     await db.read();
     station._id = v4();
+    latestReadingStore.addLatestReading(station._id);
     db.data.stations.push(station);
     await db.write();
     return station;

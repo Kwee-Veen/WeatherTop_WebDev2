@@ -2,24 +2,24 @@
   "file": "./models/readings.json",
   "readings": [
     {
-      "code": 500,
-      "temperature": 5,
-      "windSpeed": 5,
-      "windDirection": 5,
-      "pressure": 5,
-      "time": "13/08/2023, 16:56:02",
+      "code": 400,
+      "temperature": 6,
+      "windSpeed": 6,
+      "windDirection": 6,
+      "pressure": 6,
+      "time": "17/08/2023, 09:10:01",
       "_id": "10913694-0e86-4e75-a40e-8d3d0323e49f",
       "stationid": "5a0ca659-1319-45fa-a4b2-c7825817f554"
     },
     {
-      "code": 400,
-      "temperature": 4,
-      "windSpeed": 4,
-      "windDirection": 4,
-      "pressure": 4,
-      "time": "13/08/2023, 16:58:27",
-      "_id": "c2530405-2a83-4f68-98d8-4de93538adde",
-      "stationid": "a5bbc01b-2cc3-4ae1-8026-0be3350a0489"
+      "code": 900,
+      "temperature": 9,
+      "windSpeed": 9,
+      "windDirection": 9,
+      "pressure": 9,
+      "time": "19/08/2023, 14:12:33",
+      "_id": "1d4802d7-c1e0-482e-b7f7-96bfd20e6032",
+      "stationid": "44110102-aa76-475d-b587-baba3a3cee6e"
     }
   ]
 }
