@@ -1,27 +1,31 @@
 {{> welcome-menu active="login"}}
 
 <section class="content box">
-  <div class="columns">
-    <div class="column is-6">
+  <div class="columns is-centered">
+    <div class="column is-3">
       <form action="/authenticate" method="POST">
-        <h1 class="subtitle is-underlined">Log In</h1>
+        <h1 class="subtitle has-text-centered">Log In</h1>
         <br>
         <div class="field">
           <label class="label is-medium">Email:</label>
-          <input placeholder="test@test.com" name="email">
+          <input class="input" type="text" placeholder="test@test.com" name="email">
         </div>
         <div class="field">
           <label class="label is-medium">Password:</label>
-          <input type="password" placeholder="test" name="password">
+          <input class="input" type="text" ptype="password" placeholder="test" name="password">
         </div>
-        <br>
-        <button class="button is-link is-info">Login</button>
+        <div class="column has-text-centered">
+          <button class="button is-link is-info">Login</button>
+        </div>
       </form>
     </div>
-    <div class="column is-6">
-      <figure class="image is-square">
-        <img src="https://cdn.glitch.global/a954a553-344c-45c4-ab75-9002fdc69939/weather2.jpg?v=1691579047407" alt="Road lined with trees, with fog in the distance">
-      </figure>
+    <div class="column is-1"></div>
+    <div class="column is-5">
+      <section class="box">
+        <figure class="image is-square">
+          <img src="https://cdn.glitch.global/a954a553-344c-45c4-ab75-9002fdc69939/weather1.jpg?v=1691579046759" alt="Sunset reflected off a lake with a small island of trees">
+        </figure>
+      </section>
     </div>
   </div>
 </section>

@@ -20,6 +20,109 @@
       "time": "19/08/2023, 14:12:33",
       "_id": "1d4802d7-c1e0-482e-b7f7-96bfd20e6032",
       "stationid": "44110102-aa76-475d-b587-baba3a3cee6e"
+    },
+    {
+      "code": 500,
+      "temperature": 5,
+      "windSpeed": 5,
+      "windDirection": 5,
+      "pressure": 5,
+      "time": "20/08/2023, 10:10:32",
+      "_id": "2ee1c8c1-4b85-42a6-9d9d-39003624c944",
+      "stationid": "73d75945-9088-47fe-9d4a-8c6119b9bb60"
+    },
+    {
+      "code": 200,
+      "temperature": 5,
+      "windSpeed": 5,
+      "windDirection": 5,
+      "pressure": 5,
+      "time": "20/08/2023, 18:32:31",
+      "_id": "4d61b671-8129-4c6a-927e-dd7d6194023b",
+      "stationid": "1f777c2e-e3f0-43b4-b7f2-4181a322e0df"
+    },
+    {
+      "code": 1,
+      "temperature": 1,
+      "windSpeed": 1,
+      "windDirection": 1,
+      "pressure": 1,
+      "time": "20/08/2023, 18:50:44",
+      "windDirectionCompass": "N",
+      "windSpeedBeaufort": 1,
+      "temperatureFahrenheit": 33.8,
+      "_id": "a6fb4187-843b-4fce-8ac2-ca20675d5197",
+      "stationid": "3b306edd-7c0c-4ea5-a5bc-d1f488201552"
+    },
+    {
+      "code": 66,
+      "temperature": 66,
+      "windSpeed": 66,
+      "windDirection": 66,
+      "pressure": 66,
+      "time": "20/08/2023, 18:58:52",
+      "_id": "ac745235-bb93-429b-91aa-ffc3af4ab5b7",
+      "stationid": "3b306edd-7c0c-4ea5-a5bc-d1f488201552"
+    },
+    {
+      "code": 44,
+      "temperature": 44,
+      "windSpeed": 44,
+      "windDirection": 44,
+      "pressure": 44,
+      "time": "20/08/2023, 18:59:56",
+      "_id": "21f7cb2e-e8b4-4eb7-90b6-683d8f9d5345",
+      "stationid": "3b306edd-7c0c-4ea5-a5bc-d1f488201552"
+    },
+    {
+      "code": 33,
+      "temperature": 33,
+      "windSpeed": 33,
+      "windDirection": 33,
+      "pressure": 33,
+      "time": "20/08/2023, 19:00:18",
+      "_id": "6c096664-7292-4d13-8d3a-5310e3d4f5c0",
+      "stationid": "3b306edd-7c0c-4ea5-a5bc-d1f488201552"
+    },
+    {
+      "code": 33,
+      "temperature": 33,
+      "windSpeed": 33,
+      "windDirection": 33,
+      "pressure": 33,
+      "time": "20/08/2023, 19:07:15",
+      "_id": "d2ae3741-7a35-4cc6-9e51-e90f6155afd6",
+      "stationid": "55486a6e-6bb0-4ff1-b166-f491beb24882"
+    },
+    {
+      "code": 22,
+      "temperature": 22,
+      "windSpeed": 22,
+      "windDirection": 22,
+      "pressure": 22,
+      "time": "20/08/2023, 19:12:29",
+      "_id": "2f34d43f-c3e6-434c-ae79-4176a2345a33",
+      "stationid": "55486a6e-6bb0-4ff1-b166-f491beb24882"
+    },
+    {
+      "code": 11,
+      "temperature": 11,
+      "windSpeed": 11,
+      "windDirection": 11,
+      "pressure": 11,
+      "time": "20/08/2023, 19:14:34",
+      "_id": "12143a43-5e84-4108-a0ce-f478162ccf86",
+      "stationid": "55486a6e-6bb0-4ff1-b166-f491beb24882"
+    },
+    {
+      "code": 44,
+      "temperature": 44,
+      "windSpeed": 44,
+      "windDirection": 44,
+      "pressure": 44,
+      "time": "20/08/2023, 19:20:49",
+      "_id": "490a6a77-2eb4-41e6-ba6f-351cc00771f6",
+      "stationid": "ce07498d-a777-4f10-b1f4-8ec91434becc"
     }
   ]
 }
