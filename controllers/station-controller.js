@@ -1,16 +1,13 @@
 import { stationStore } from "../models/station-store.js";
 import { readingStore } from "../models/reading-store.js";
 import { latestReadingStore } from "../models/latest-reading-store.js";
-// import { playlistAnalytics } from "../utils/playlist-analytics.js";
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
-    // const shortestTrack = playlistAnalytics.getShortestTrack(playlist);    
     const viewData = {
       title: station.title,
       station: station,
-      // shortestTrack: shortestTrack,
     };
     console.log(`rendering station ${viewData.title}`);
     response.render("station-view", viewData);
@@ -27,6 +24,7 @@ export const stationController = {
       pressure: Number(request.body.pressure),
       time: now.toLocaleString('en-GB', { timeZone: 'UTC' }),
     };
+    await latestReadingStore.addLatestReading(request.params.id, newReading);
     console.log(`adding reading at time ${newReading.time}`);
     await readingStore.addReading(station._id, newReading);
     response.redirect("/station/" + station._id);

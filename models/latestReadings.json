@@ -2,46 +2,6 @@
   "file": "./models/latestReadings.json",
   "latestReadings": [
     {
-      "code": " ",
-      "temperature": " ",
-      "windSpeed": " ",
-      "windDirection": " ",
-      "pressure": " ",
-      "time": " ",
-      "_id": "f9807750-69ef-4c1e-b321-c05f94e1ef45",
-      "stationid": "f628e492-eb1e-4958-bc96-f2d99e98b5a2"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": 0,
-      "pressure": 0,
-      "time": 0,
-      "_id": "4c1c83fa-9e43-45f6-add7-4a72a81e938d",
-      "stationid": "f0132e46-18b0-494f-925b-e6a0c5cf3e5a"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": 0,
-      "pressure": 0,
-      "time": 0,
-      "_id": "c2a4a770-c833-4cf8-b64d-2358e776812b",
-      "stationid": "c5b9ebda-13ce-417e-996d-5f9821e199d0"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": 0,
-      "pressure": 0,
-      "time": 0,
-      "_id": "5cf6a4e7-aa5c-4a56-adcc-1837ac1b5c6f",
-      "stationid": "d31723cc-3277-4c32-bb42-0ed49d7a2943"
-    },
-    {
       "code": 0,
       "temperature": 0,
       "windSpeed": 0,
@@ -120,6 +80,134 @@
       "time": 0,
       "_id": "d9453176-b347-4891-a1a9-74ef7a59ef17",
       "stationid": "0b3417ef-e6fa-4ee6-b7e3-ad74073ddc74"
+    },
+    {
+      "code": 0,
+      "temperature": 0,
+      "windSpeed": 0,
+      "windDirection": 0,
+      "pressure": 0,
+      "time": 0,
+      "_id": "87147cda-8acc-4ba6-9ba2-2252d7f82a52",
+      "stationid": "f42caa8b-376c-4385-a192-1b9dbea91cdf"
+    },
+    {
+      "code": 0,
+      "temperature": 0,
+      "windSpeed": 0,
+      "windDirection": 0,
+      "pressure": 0,
+      "time": 0,
+      "_id": "f3adc1a0-f696-469f-a04b-833ec631bcf2",
+      "stationid": "2b5a14dc-1c5e-45fb-bd05-4dd5238a5dc0"
+    },
+    {
+      "code": 0,
+      "temperature": 5,
+      "windSpeed": 0,
+      "windDirection": 0,
+      "pressure": 0,
+      "time": 0,
+      "_id": "f7dcf6ac-e27a-4dcc-8150-0152b9a9461f",
+      "stationid": "782ffeea-2b5c-4a4d-b180-ef95ae4c1243"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 2,
+      "pressure": 3,
+      "time": 0,
+      "_id": "cb248602-1010-4611-ae54-0869315196cf",
+      "stationid": "e9ee8816-4196-4a64-b033-e665305be7e3"
+    },
+    {
+      "code": 0,
+      "temperature": 5,
+      "windSpeed": 0,
+      "windDirection": 0,
+      "pressure": 0,
+      "time": 0,
+      "_id": "54e63837-2cb5-42a9-a166-08a7807e2d8e",
+      "stationid": "e6483304-f801-4adf-b994-1950c934f08a"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 2,
+      "pressure": 3,
+      "time": 0,
+      "_id": "2cadcf25-0a2a-4b38-9935-beb8b6d14503",
+      "stationid": "26573f0f-a447-416e-8cea-1e1bca994022"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 0,
+      "windDirectionCompass": "N",
+      "pressure": 3,
+      "time": 0,
+      "_id": "6a490415-940a-4fc7-a6f5-8fc41c5a914b",
+      "stationid": "191398f8-560c-4b95-bc43-3004e2cd71fe"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 0,
+      "windDirectionCompass": "ENE",
+      "pressure": 3,
+      "time": 0,
+      "_id": "4d641899-5502-4129-adec-b7dfb0a8a6da",
+      "stationid": "86a2bba5-3c82-4e65-8dd9-768c84ad354b"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 0,
+      "windDirectionCompass": " ",
+      "pressure": 3,
+      "time": 0,
+      "_id": "a8ca54f9-3702-4949-b52c-2cbeb9033a8a",
+      "stationid": "3eba06da-6cbd-40af-8bce-59288e4ced39"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 0,
+      "windDirectionCompass": " ",
+      "pressure": 0,
+      "time": 0,
+      "_id": "6fcfc4be-689b-4d16-b6b1-582497f040a3",
+      "stationid": "1b4e64b6-6659-47f5-a6ac-6aca642841ec"
+    },
+    {
+      "code": 20,
+      "temperature": 5,
+      "windSpeed": 1,
+      "windDirection": 0,
+      "windDirectionCompass": " ",
+      "pressure": 0,
+      "time": 0,
+      "_id": "d61a814b-8115-40fc-9e20-dac3d5f346e0",
+      "stationid": "d0859aac-c502-4f03-ab01-ed937bc89ee1"
+    },
+    {
+      "code": 44,
+      "temperature": 44,
+      "temperatureFahrenheit": 111.2,
+      "windSpeed": 44,
+      "windDirection": 44,
+      "windDirectionCompass": "NE",
+      "windSpeedBeaufort": 6,
+      "pressure": 44,
+      "time": "20/08/2023, 19:20:49",
+      "_id": "cc74d457-417f-4d95-80c8-4a0ee3cc1e10",
+      "stationid": "ce07498d-a777-4f10-b1f4-8ec91434becc"
     }
   ]
 }

@@ -2,27 +2,10 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "test",
-      "lastName": "test",
-      "_id": "6ba0b619-db8a-492b-9d90-cb9fab3c1da8"
-    },
-    {
-      "_id": "afc0d25e-a3d7-4f87-889e-8472532cc78e"
-    },
-    {
-      "_id": "f9239913-a04e-49f0-b731-6260b12a66a4"
-    },
-    {
-      "_id": "0bd9a5f6-8213-4d0d-9196-6a37a3fc21fc"
-    },
-    {
-      "_id": "f7374a31-c4f1-4409-b953-67da94a5f2a4"
-    },
-    {
-      "firstname": "tset",
-      "surname": "tset",
-      "email": "tset",
-      "password": "tset",
+      "firstname": "test",
+      "surname": "test",
+      "email": "test",
+      "password": "test",
       "_id": "2d089554-701f-4bdb-815c-2a8c9d98885a"
     }
   ]

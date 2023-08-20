@@ -14,7 +14,8 @@ export const stationStore = {
   async addStation(station) {
     await db.read();
     station._id = v4();
-    latestReadingStore.addLatestReading(station._id);
+    const latestReading = await latestReadingStore.addPlaceholderLatestReading(station._id);
+    station.latestReading = latestReading;
     db.data.stations.push(station);
     await db.write();
     return station;
