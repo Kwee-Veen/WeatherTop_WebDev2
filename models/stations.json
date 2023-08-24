@@ -2,64 +2,24 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "test",
+      "title": "1",
       "latitude": "1",
       "longitude": "1",
       "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
-      "_id": "55486a6e-6bb0-4ff1-b166-f491beb24882",
       "latestReading": {
-        "code": 100,
-        "temperature": 0,
-        "temperatureFahrenheit": 0,
-        "windSpeed": 0,
-        "windDirection": 0,
-        "windSpeedBeaufort": 0,
-        "windDirectionCompass": " ",
-        "pressure": 0,
-        "time": 0,
-        "_id": "f41586e3-6302-4499-9cf9-8bc19182b3e0",
-        "stationid": "55486a6e-6bb0-4ff1-b166-f491beb24882"
-      }
-    },
-    {
-      "title": "tset",
-      "latitude": "2",
-      "longitude": "2",
-      "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
-      "_id": "c9fc7a06-a3aa-49d9-9552-5527c86cad99",
-      "latestReading": {
-        "code": 100,
-        "temperature": 0,
-        "temperatureFahrenheit": 0,
-        "windSpeed": 0,
-        "windDirection": 0,
-        "windSpeedBeaufort": 0,
-        "windDirectionCompass": " ",
-        "pressure": 0,
-        "time": 0,
-        "_id": "f2510815-08e7-438f-80a6-bf480724a4df",
-        "stationid": "c9fc7a06-a3aa-49d9-9552-5527c86cad99"
-      }
-    },
-    {
-      "title": "ttt",
-      "latitude": "3",
-      "longitude": "3",
-      "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
-      "_id": "ce07498d-a777-4f10-b1f4-8ec91434becc",
-      "latestReading": {
-        "code": 100,
-        "temperature": 0,
-        "temperatureFahrenheit": 0,
-        "windSpeed": 0,
-        "windDirection": 0,
-        "windSpeedBeaufort": 0,
-        "windDirectionCompass": " ",
-        "pressure": 0,
-        "time": 0,
-        "_id": "bf49330a-5f4c-44e6-8a71-281ed129859b",
-        "stationid": "ce07498d-a777-4f10-b1f4-8ec91434becc"
-      }
+        "code": 1,
+        "temperature": 1,
+        "temperatureFahrenheit": 33.8,
+        "windSpeed": 1,
+        "windDirection": 1,
+        "windDirectionCompass": "N",
+        "windSpeedBeaufort": 1,
+        "pressure": 1,
+        "time": "24/08/2023, 10:46:21",
+        "_id": "26a84e52-539b-4c2a-934b-a22a8126b06c",
+        "stationid": "57ff3554-86bb-4693-a0c9-920c600047fc"
+      },
+      "_id": "57ff3554-86bb-4693-a0c9-920c600047fc"
     }
   ]
 }

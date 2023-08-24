@@ -1,6 +1,5 @@
 import { stationStore } from "../models/station-store.js";
 import { readingStore } from "../models/reading-store.js";
-import { latestReadingStore } from "../models/latest-reading-store.js";
 
 export const readingController = {
   async index(request, response) {
@@ -9,7 +8,7 @@ export const readingController = {
     console.log(`Editing Reading ${readingId} from Station ${stationId}`);
     const viewData = {
       title: "Edit Reading",
-      station: await stationStore.getStationById(stationId),
+      station: await stationStore.getStationByIdWithReadings(stationId),
       reading: await readingStore.getReadingById(readingId),
     };
     response.render("reading-view", viewData);

@@ -1,13 +1,18 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
-import { latestReadingStore } from "../models/latest-reading-store.js";
+import { stationAnalytics } from "../utils/station-analytics.js";
 
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+    let stations = await stationStore.getStationsByUserId(loggedInUser._id);
+    for (let i = 0; i < stations.length; i++) {
+      stations[i].latestReading = await stationAnalytics.updateWeather(stations[i]._id);
+      //Sort stations alphabetically here   
+    }
     const viewData = {
       title: "Station Dashboard",
-      stations: await stationStore.getStationsByUserId(loggedInUser._id),
+      stations: stations,
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
