@@ -2,30 +2,35 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "11",
-      "latitude": "11",
-      "longitude": "11",
+      "title": "Pyongyang",
+      "latitude": "39.0738",
+      "longitude": "125.8198",
       "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
       "latestReading": {
-        "code": 11,
-        "temperature": 11,
-        "temperatureFahrenheit": 51.8,
-        "windSpeed": 11,
-        "windDirection": 11,
-        "windDirectionCompass": "N",
-        "windSpeedBeaufort": 2,
-        "pressure": 11,
-        "time": "26/08/2023, 14:46:38",
-        "_id": "d569a8d4-97bc-445c-83fa-93cad8bac679",
-        "stationid": "d3175156-7782-40cc-b2b1-abf22547b3be"
+        "weather": "Rain",
+        "weatherIcon": "carbon:rain",
+        "temperature": 24,
+        "temperatureFahrenheit": 75.2,
+        "windSpeed": 17,
+        "windDirection": 26,
+        "windDirectionCompass": "NNE",
+        "windSpeedBeaufort": 3,
+        "pressure": 1009.66,
+        "windChill": 25.12,
+        "time": "26/08/2023, 20:44:07",
+        "_id": "9dc3e590-d8d9-4ca4-8246-5d5a04930a78",
+        "stationid": "944b68d7-812d-48e1-96f1-096f4ba0d999"
       },
-      "_id": "d3175156-7782-40cc-b2b1-abf22547b3be",
-      "maxTemp": 11,
-      "minTemp": 11,
-      "maxWindSpeed": 11,
-      "minWindSpeed": 11,
-      "maxPressure": 11,
-      "minPressure": 11
+      "_id": "944b68d7-812d-48e1-96f1-096f4ba0d999",
+      "tempTrend": "icon-park-twotone:up-two",
+      "windTrend": "icon-park-twotone:up-two",
+      "pressureTrend": "icon-park-twotone:down-two",
+      "maxTemp": 24,
+      "minTemp": 0,
+      "maxWindSpeed": 17,
+      "minWindSpeed": 0,
+      "maxPressure": 1013.25,
+      "minPressure": 0
     }
   ]
 }

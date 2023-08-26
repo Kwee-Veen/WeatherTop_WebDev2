@@ -8,8 +8,7 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     let stations = await stationStore.getStationsByUserId(loggedInUser._id);
     for (let i = 0; i < stations.length; i++) {
-      await stationAnalytics.updateWeather(stations[i]._id);
-      //Sort stations alphabetically here   
+      await stationAnalytics.updateWeather(stations[i]._id); 
     }
     stations = await stationStore.getStationsByUserId(loggedInUser._id);
     const viewData = {
@@ -17,6 +16,7 @@ export const dashboardController = {
       stations: stations,
     };
     console.log("dashboard rendering");
+    // console.log(stations);
     response.render("dashboard-view", viewData);
   },
 

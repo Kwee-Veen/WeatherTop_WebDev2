@@ -13,7 +13,7 @@
         </div>
         <div class="column is-3">
             <span class="icon has-background location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 17"><path fill="currentColor" d="m12.596 11.596l-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193a6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewbox="0 0 16 17"><path fill="currentColor" d="m12.596 11.596l-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193a6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"/></svg>
             </span>
         </div>
       </div>
@@ -26,14 +26,14 @@
           <h5 class="title is-5 has-text-warning">
             Weather
           </h5>
-<!--             <p>
-            ${station.latestWeather}
+          <p>
+            {{latestReading.weather}}
           </p>
         </div>
         <div class="column is-3">
-            <span class="icon has-background weather">
-              <i class='${station.latestWeatherIcon}'></i>
-            </span> -->
+          <span class="icon has-background weather">
+            <iconify-icon icon="{{latestReading.weatherIcon}}"></iconify-icon>
+          </span>
         </div> 
       </div>
     </div>
@@ -64,16 +64,16 @@
           <div class="columns is-multiline">
             <div class="column">
                 <span class="icon has-background temperature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 25"><path fill="currentColor" fill-rule="evenodd" d="M8.25 5a3.75 3.75 0 1 1 7.5 0v6.348c0 .072.04.18.158.274a6.25 6.25 0 1 1-7.816 0c.118-.095.158-.202.158-.274V5ZM12 2.75A2.25 2.25 0 0 0 9.75 5v6.348c0 .603-.31 1.116-.72 1.444a4.75 4.75 0 1 0 5.939 0c-.409-.328-.719-.84-.719-1.444V5A2.25 2.25 0 0 0 12 2.75Zm0 1.5a.75.75 0 0 1 .75.75v8.337a3.251 3.251 0 1 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 10.5a1.75 1.75 0 1 0 0 3.5a1.75 1.75 0 0 0 0-3.5Z" clip-rule="evenodd"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 24 25"><path fill="currentColor" fill-rule="evenodd" d="M8.25 5a3.75 3.75 0 1 1 7.5 0v6.348c0 .072.04.18.158.274a6.25 6.25 0 1 1-7.816 0c.118-.095.158-.202.158-.274V5ZM12 2.75A2.25 2.25 0 0 0 9.75 5v6.348c0 .603-.31 1.116-.72 1.444a4.75 4.75 0 1 0 5.939 0c-.409-.328-.719-.84-.719-1.444V5A2.25 2.25 0 0 0 12 2.75Zm0 1.5a.75.75 0 0 1 .75.75v8.337a3.251 3.251 0 1 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 10.5a1.75 1.75 0 1 0 0 3.5a1.75 1.75 0 0 0 0-3.5Z" clip-rule="evenodd"/></svg>
                 </span>
             </div>
             <div class="column">
             </div>
-            <!--<div class="column">
-                <span class="icon temperature">
-                  <i class='${station.temperatureTrendIcon}'></i>
-                </span>
-            </div>--> 
+            <div class="column">
+              <span class="icon temperature">
+                  <iconify-icon icon="{{tempTrend}}"></iconify-icon>
+              </span>
+            </div> 
           </div> 
         </div> 
       </div>
@@ -88,8 +88,8 @@
           </h5>
              <div class="columns">
             <div class="column is-narrow">
-              {{latestReading.windSpeedBeaufort}} Bft <br>
-              Feels like<br>
+              {{latestReading.windSpeedBeaufort}} Bft<br>
+              Feels:<br>
               Max:<br>
               Min:
             </div>
@@ -110,11 +110,11 @@
             </div>
             <div class="column">
             </div>
-            <!--<div class="column">
-                <span class="icon wind">
-                  <i class='${station.windTrendIcon}'></i>
-                </span>
-            </div> -->
+            <div class="column">
+              <span class="icon wind">
+                  <iconify-icon icon="{{windTrend}}"></iconify-icon>
+              </span>
+            </div> 
           </div> 
         </div> 
       </div>
@@ -149,13 +149,13 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 26"><path fill="currentColor" d="M12 3a4 4 0 0 1 4 4c0 .73-.19 1.41-.54 2H18c.95 0 1.75.67 1.95 1.56C21.96 18.57 22 18.78 22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2c0-.22.04-.43 2.05-8.44C4.25 9.67 5.05 9 6 9h2.54A3.89 3.89 0 0 1 8 7a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 6v8h5v-2H8v-6H6m7 0v8h3c1.11 0 2-.89 2-2v-.5c0-.57-.25-1.12-.68-1.5c.43-.38.68-.93.68-1.5V13c0-1.11-.89-2-2-2h-3m2 2h1v1h-1v-1m0 3h1v1h-1v-1Z"/></svg>
                 </span>
             </div>
-            <!--<div class="column">
+            <div class="column">
             </div>
             <div class="column">
-                <span class="icon pressure">
-                  <i class='${station.pressureTrendIcon}'></i>
-                </span>
-            </div> -->
+              <span class="icon pressure">
+                  <iconify-icon icon="{{pressureTrend}}"></iconify-icon>
+              </span>
+            </div> 
           </div> 
         </div> 
       </div>
