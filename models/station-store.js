@@ -33,6 +33,11 @@ export const stationStore = {
     return list;
   },
   
+  async getStationsByUserId(userid) {
+    await db.read();
+    return db.data.stations.filter((station) => station.userid === userid);
+  },
+  
   async deleteStationById(id) {
     await db.read();
     await readingStore.deleteAllReadingsWithStationId(id);
@@ -41,13 +46,5 @@ export const stationStore = {
     await db.write();
   },
   
-  async getStationsByUserId(userid) {
-    await db.read();
-    return db.data.stations.filter((station) => station.userid === userid);
-  },
 
-  async deleteAllStations() {
-    db.data.stations = [];
-    await db.write();
-  },
 };

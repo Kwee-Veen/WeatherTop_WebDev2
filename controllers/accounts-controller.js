@@ -12,11 +12,13 @@ export const accountsController = {
     const viewData = {
       title: "Login to WeatherTop",
     };
+    console.log("Rendering login view");
     response.render("login-view", viewData);
   },
   
   logout(request, response) {
     response.cookie("station", "");
+    console.log("Logging user out");
     response.redirect("/");
   },
   
@@ -24,6 +26,7 @@ export const accountsController = {
     const viewData = {
       title: "Register New Account: WeatherTop",
     };
+    console.log("Rendering sign-up view");
     response.render("signup-view", viewData);
   },
   

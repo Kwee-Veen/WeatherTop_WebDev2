@@ -15,7 +15,6 @@ export const modifyAccountsController = {
   
   async modifyAccount(request, response) {
     const oldUserData = await accountsController.getLoggedInUser(request);
-    console.log(request.body);
     const updatedUserData = {
       firstname: request.body.firstname,
       surname: request.body.surname,

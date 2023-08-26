@@ -1,25 +1,27 @@
-<form class="box" action="/station/{{station._id}}/addreading" method="POST">
-  <label><b>New Reading</b>: Enter Details Below</label>
-  <div class="field is-horizontal">
-    <div class="field-body">
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Weather Code" name="code">
+{{#each station}}
+  <form class="box" action="/station/{{_id}}/addreading" method="POST">
+    <label><b>New Reading</b>: Enter Details Below</label>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter Weather Code" name="code">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter Temperature" name="temperature">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter Wind Speed" name="windspeed">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter Wind Direction" name="winddirection">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
+        </div>
       </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Temperature" name="temperature">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Speed" name="windspeed">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Direction" name="winddirection">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
-      </div>
+    <button class="button is-primary">
+      Add Reading
+    </button>
     </div>
-  <button class="button is-primary">
-    Add Reading
-  </button>
-  </div>
-</form>
+  </form>
+{{/each}}

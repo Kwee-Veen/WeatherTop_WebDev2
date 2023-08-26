@@ -2,24 +2,30 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "1",
-      "latitude": "1",
-      "longitude": "1",
+      "title": "11",
+      "latitude": "11",
+      "longitude": "11",
       "userid": "2d089554-701f-4bdb-815c-2a8c9d98885a",
       "latestReading": {
-        "code": 1,
-        "temperature": 1,
-        "temperatureFahrenheit": 33.8,
-        "windSpeed": 1,
-        "windDirection": 1,
+        "code": 11,
+        "temperature": 11,
+        "temperatureFahrenheit": 51.8,
+        "windSpeed": 11,
+        "windDirection": 11,
         "windDirectionCompass": "N",
-        "windSpeedBeaufort": 1,
-        "pressure": 1,
-        "time": "24/08/2023, 10:46:21",
-        "_id": "26a84e52-539b-4c2a-934b-a22a8126b06c",
-        "stationid": "57ff3554-86bb-4693-a0c9-920c600047fc"
+        "windSpeedBeaufort": 2,
+        "pressure": 11,
+        "time": "26/08/2023, 14:46:38",
+        "_id": "d569a8d4-97bc-445c-83fa-93cad8bac679",
+        "stationid": "d3175156-7782-40cc-b2b1-abf22547b3be"
       },
-      "_id": "57ff3554-86bb-4693-a0c9-920c600047fc"
+      "_id": "d3175156-7782-40cc-b2b1-abf22547b3be",
+      "maxTemp": 11,
+      "minTemp": 11,
+      "maxWindSpeed": 11,
+      "minWindSpeed": 11,
+      "maxPressure": 11,
+      "minPressure": 11
     }
   ]
 }
