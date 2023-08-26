@@ -35,7 +35,17 @@ export const stationStore = {
   
   async getStationsByUserId(userid) {
     await db.read();
-    return db.data.stations.filter((station) => station.userid === userid);
+    var stations = db.data.stations.filter((station) => station.userid === userid);
+    stations.sort(function (a, b) {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    });
+    return stations
   },
   
   async deleteStationById(id) {
