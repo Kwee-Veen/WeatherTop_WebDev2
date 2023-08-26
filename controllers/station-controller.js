@@ -1,16 +1,21 @@
 import { stationStore } from "../models/station-store.js";
 import { readingStore } from "../models/reading-store.js";
+import { stationAnalytics } from "../utils/station-analytics.js";
 
 export const stationController = {
+  
   async index(request, response) {
-    const station = await stationStore.getStationByIdWithReadings(request.params.id);
-    //Refactor: get no latestReading to get. Remove from here & viewData.
-    //Run analytics.updateWeather(station);
+    await stationAnalytics.updateWeather(request.params.id);
+    let station = [];
+    station[0] = await stationStore.getStationById(request.params.id);
+    let readings = await stationStore.getStationByIdWithReadings(request.params.id);
     const viewData = {
       title: station.title,
       station: station,
+      readings: readings.readings,
+      stationid: station._id,
     };
-    console.log(`rendering station ${viewData.title}`);
+    console.log(`Rendering station view`);
     response.render("station-view", viewData);
   },
   
@@ -29,6 +34,7 @@ export const stationController = {
     console.log(`adding reading at time ${newReading.time}`);
     response.redirect("/station/" + station._id);
   },
+  
   async deleteReading(request, response) {
     const stationId = request.params.stationid;
     const readingId = request.params.readingid;

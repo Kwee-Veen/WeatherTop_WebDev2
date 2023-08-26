@@ -49,14 +49,14 @@
             <div class="column is-narrow">
               Now: <br>
               <br>
-              Min:<br>
-              Max:
+              Max:<br>
+              Min:
             </div>
             <div class="column">
               {{latestReading.temperature}}°C<br>
               {{latestReading.temperatureFahrenheit}}°F<br>
-              {{latestReading.minTemp}}°C<br>
-              {{latestReading.maxTemp}}°C
+              {{maxTemp}}°C<br>
+              {{minTemp}}°C
             </div>
           </div>
         </div>
@@ -90,14 +90,14 @@
             <div class="column is-narrow">
               {{latestReading.windSpeedBeaufort}} Bft <br>
               Feels like<br>
-              Min:<br>
-              Max:
+              Max:<br>
+              Min:
             </div>
             <div class="column">
               {{latestReading.windDirectionCompass}}<br>
               {{latestReading.windChill}}°C<br>
-              {{station.minWindSpeed}} <br>
-              {{station.maxWindSpeed}}
+              {{maxWindSpeed}} <br>
+              {{minWindSpeed}}
             </div>
           </div>
         </div>
@@ -131,14 +131,14 @@
             <div class="column is-narrow">
               Now:<br>
               <br>
-              Min:<br>
-              Max:
+              Max:<br>
+              Min:
             </div>
             <div class="column">
               {{latestReading.pressure}}hPa<br>
               <br>
-              {{station.minPressure}}hPa<br>
-              {{station.maxPressure}}hPa
+              {{maxPressure}}hPa<br>
+              {{minPressure}}hPa
             </div>
           </div>
         </div>

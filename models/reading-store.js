@@ -25,6 +25,12 @@ export const readingStore = {
     const reading = {      
       _id: v4(),
       stationid: stationid,
+      code: 0,
+      temperature: 0,
+      windSpeed: 0,
+      windDirection: 0,
+      pressure : 0,
+      time: "Placeholder",
     }
     station.latestReading = reading;
     db.data.readings.push(reading);
@@ -44,10 +50,19 @@ export const readingStore = {
   
   async getMostRecentReadingByStationId(stationid) {
     await db.read();
-    const stationReadings = await db.data.readings.filter((reading) => reading.stationid === stationid);
+    const stationReadings = await readingStore.getReadingsByStationId(stationid);
     let findings = null;
-    if ((stationReadings.length < 2) || (stationReadings.length === undefined)){
-      findings = stationReadings;
+    if ((stationReadings.length < 1) || (stationReadings.length === undefined)){
+      findings = {
+        _id: v4(),
+        stationid: stationid,
+        code: 0,
+        temperature: 0,
+        windSpeed: 0,
+        windDirection: 0,
+        pressure : 0,
+        time: "Placeholder",
+      }
     } else {
       findings = stationReadings.slice(-1)[0]; 
     }
@@ -74,21 +89,9 @@ export const readingStore = {
     async deleteAllReadingsWithStationId(stationid) {
     await db.read();
     const list = await readingStore.getReadingsByStationId(stationid);
-    console.log(list);
     for (let i = 0; i < list.length; i++) {
     await readingStore.deleteReading(list[i]._id);
     }
-    //     console.log(list[i]._id);
-    // if ((list.length < 2) || (list === undefined)) {
-    //   await readingStore.deleteReading(list._id);
-    //   console.log(list._id);
-    //   console.log(`^ Trying to delete this. Considers this station to have had less than 2 readings.`);
-    // } else {
-    //   for (let i = 0; i < list.length; i++) {
-    //     await readingStore.deleteReading(list[i]._id);
-    //     console.log(list[i]._id);
-    //     console.log(`^ Trying to delete this. Considers this station to have had 2 or more readings.`);
-    //   }
   },
 
   async deleteAllReadings() {

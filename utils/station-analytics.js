@@ -1,9 +1,9 @@
 import { readingStore } from "../models/reading-store.js";
 import { stationStore } from "../models/station-store.js";
 import { dataConversions } from "./conversions.js";
+import { minMax } from "./min-max.js";
 import { initStore } from "./store-utils.js";
 import { v4 } from "uuid";
-//get rid of any imports not required.
 
 const db = initStore("stations");
 
@@ -30,9 +30,9 @@ export const stationAnalytics = {
       stationid: station._id,
     }
     station.latestReading = latestReading;
+    station = await minMax.setMinMaxValues(station);
     const index = await db.data.stations.findIndex((station) => station._id === inputStationid);
     db.data.stations.splice(index, 1, station);
     await db.write();
-    return latestReading;
   }
 };

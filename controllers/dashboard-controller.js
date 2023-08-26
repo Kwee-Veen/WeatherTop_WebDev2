@@ -3,13 +3,15 @@ import { accountsController } from "./accounts-controller.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
 
 export const dashboardController = {
+  
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     let stations = await stationStore.getStationsByUserId(loggedInUser._id);
     for (let i = 0; i < stations.length; i++) {
-      stations[i].latestReading = await stationAnalytics.updateWeather(stations[i]._id);
+      await stationAnalytics.updateWeather(stations[i]._id);
       //Sort stations alphabetically here   
     }
+    stations = await stationStore.getStationsByUserId(loggedInUser._id);
     const viewData = {
       title: "Station Dashboard",
       stations: stations,
