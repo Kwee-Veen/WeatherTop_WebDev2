@@ -1,10 +1,23 @@
 {{#each station}}
   <form class="box" action="/station/{{_id}}/addreading" method="POST">
-    <label><b>New Reading</b></label>
+    <label class="label has-text-centered"><b>Add New Reading</b></label>
     <div class="field is-horizontal">
       <div class="field-body">
         <div class="field">
-          <input class="input" type="text" placeholder="Enter Weather Code" name="code">
+          <div class="control">
+            <div class="select">
+              <select class="input" name="code">
+                <option value="100">Clear</option>
+                <option value="200">Partial Clouds</option>
+                <option value="300">Cloudy</option>
+                <option value="400">Light Rain</option>
+                <option value="500">Heavy Shower</option>
+                <option value="600">Rain</option>
+                <option value="700">Snow</option>
+                <option value="800">Thunder</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="field">
           <input class="input" type="text" placeholder="Enter Temperature" name="temperature">
@@ -18,7 +31,7 @@
         <div class="field">
           <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
         </div>
-      </div>
+      </div>    
     <button class="button is-primary">
       Add Reading
     </button>

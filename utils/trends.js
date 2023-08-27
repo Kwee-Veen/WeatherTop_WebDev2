@@ -20,7 +20,6 @@ export const dataTrends = {
       readings[i] = station.readings[i];
     }
     for (let i = 0; i < station.readings.length; i++) {
-      console.log(i);
       readings[0] = readings[1];
       readings[1] = readings[2];
       readings[2] = station.readings[i];
@@ -40,7 +39,6 @@ export const dataTrends = {
       results.pressureTrend = upTrend;
     else if ((readings[0].pressure > readings[1].pressure) && (readings[1].pressure > readings[2].pressure))
       results.pressureTrend = downTrend;
-    console.log(results);
     
     return results
   }
