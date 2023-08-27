@@ -32,9 +32,20 @@
           <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
         </div>
       </div>    
-    <button class="button is-primary">
-      Add Reading
-    </button>
+      <button class="button is-primary">
+        Add Reading
+      </button>
+    </div>
+  </form>
+
+
+
+  <form class="box" action="/station/{{_id}}/autogeneratereading" method="POST">
+    <label class="label has-text-centered"><b>Auto Generate Reading</b></label>
+    <div class="field has-text-centered">   
+      <button class="button is-danger is-centered">
+        Add Auto Reading
+      </button>
     </div>
   </form>
 {{/each}}

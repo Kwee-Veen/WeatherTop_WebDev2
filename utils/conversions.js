@@ -29,6 +29,10 @@ export const dataConversions = {
     return beaufort;
   },
   
+  async rounder(number) {
+    return Math.round(number * 100) / 100;
+  },
+  
   async celsiusToFahrenheit(celsius) {
     return (((celsius * 9) / 5) + 32);
   },
@@ -74,7 +78,54 @@ export const dataConversions = {
   async getWindChill(temperature, windSpeed) {
     return Math.round((13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * (Math.pow(windSpeed, 0.16)))) * 100) / 100;
   },
-  
+  // async getWeather(code) {
+  //   switch (code) {
+  //     case 100:
+  //       return {
+  //         weather: "Clear",
+  //         icon: `solar:sun-bold-duotone`,
+  //       }
+  //     case 200:
+  //       return {
+  //         weather: "Partial Clouds",
+  //         icon: "ph:cloud-sun",
+  //       }
+  //     case 300:
+  //       return {
+  //         weather: "Cloudy",
+  //         icon: "solar:cloud-line-duotone",
+  //       }
+  //     case 400:
+  //       return {
+  //         weather: "Light Rain",
+  //         icon: "wi:rain-wind",
+  //       }
+  //     case 500:
+  //       return {
+  //         weather: "Heavy Shower",
+  //         icon: "bi:cloud-rain-fill",
+  //       }
+  //     case 600:
+  //       return {
+  //         weather: "Rain",
+  //         icon: "carbon:rain",
+  //       }
+  //     case 700:
+  //       return {
+  //         weather: "Snow",
+  //         icon: "wpf:snow",
+  //       }
+  //     case 800:
+  //       return {
+  //         weather: "Thunder",
+  //         icon: "mdi:weather-thunder",
+  //       }
+  //     default:
+  //       return {
+  //         weather: "Weather Unknown",
+  //         icon: "ps:radio-empty",
+  //       }
+  //   }
   async getWeather(code) {
     switch (code) {
       case 100:
@@ -83,43 +134,83 @@ export const dataConversions = {
           icon: `solar:sun-bold-duotone`,
         }
       case 200:
+      case 801:
+      case 802:
         return {
           weather: "Partial Clouds",
           icon: "ph:cloud-sun",
         }
       case 300:
+      case 803: 
+      case 804:
         return {
           weather: "Cloudy",
           icon: "solar:cloud-line-duotone",
         }
       case 400:
+      case 301:
+      case 302:
+      case 310:
+      case 311:
+      case 312:
+      case 313:
+      case 314:
+      case 321:
         return {
           weather: "Light Rain",
           icon: "wi:rain-wind",
         }
       case 500:
+      case 502:
+      case 503:
+      case 504:
+      case 511:
+      case 520:
+      case 522:
         return {
           weather: "Heavy Shower",
           icon: "bi:cloud-rain-fill",
         }
       case 600:
+      case 501:
+      case 521:
+      case 531:
         return {
           weather: "Rain",
           icon: "carbon:rain",
         }
       case 700:
+      case 601:
+      case 602:
+      case 611:
+      case 612:
+      case 613:
+      case 615:
+      case 616:
+      case 620:
+      case 621:
+      case 622:
         return {
           weather: "Snow",
           icon: "wpf:snow",
         }
       case 800:
+      case 201:
+      case 202:
+      case 210:
+      case 211:
+      case 212:
+      case 221:
+      case 230:
+      case 231:
+      case 232:
         return {
           weather: "Thunder",
           icon: "mdi:weather-thunder",
         }
       default:
         return {
-          weather: "No Weather Found",
+          weather: "Weather Unknown",
           icon: "ps:radio-empty",
         }
     }

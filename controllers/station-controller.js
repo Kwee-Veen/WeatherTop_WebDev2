@@ -1,6 +1,8 @@
 import { stationStore } from "../models/station-store.js";
 import { readingStore } from "../models/reading-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
+import { dataConversions } from "../utils/conversions.js";
+import fetch from 'node-fetch';
 
 export const stationController = {
   
@@ -20,18 +22,41 @@ export const stationController = {
   },
   
   async addReading(request, response) {
-    let station = await stationStore.getStationByIdWithReadings(request.params.id);
+    let station = await stationStore.getStationById(request.params.id);
     const now = new Date();
     const newReading = {
-      code: Number(request.body.code),
-      temperature: Number(request.body.temperature),
-      windSpeed: Number(request.body.windspeed),
-      windDirection: Number(request.body.winddirection),
-      pressure: Number(request.body.pressure),
+      code: await dataConversions.rounder(Number(request.body.code)),
+      temperature: await dataConversions.rounder(Number(request.body.temperature)),
+      windSpeed: await dataConversions.rounder(Number(request.body.windspeed)),
+      windDirection: await dataConversions.rounder(Number(request.body.winddirection)),
+      pressure: await dataConversions.rounder(Number(request.body.pressure)),
       time: now.toLocaleString('en-GB', { timeZone: 'UTC' }),
     };
     await readingStore.addReading(station._id, newReading);
     console.log(`adding reading at time ${newReading.time}`);
+    response.redirect("/station/" + station._id);
+  },
+  
+    async autoGenerateReading(request, response) {
+    let station = await stationStore.getStationById(request.params.id);
+    const now = new Date();
+    const lat = station.latitude;
+    const long = station.longitude;
+    const apiKey = "0c109ad6bb8a0b5d8a284ce6061f12c6";
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=` + lat + `&lon=` + long + `&appid=` + apiKey;
+    const search = await fetch(url);
+    const data = await search.json();
+    let autoReading = {
+      code: data.weather[0].id,
+      temperature: await dataConversions.rounder(data.main.temp-273.15),
+      windSpeed: await dataConversions.rounder(data.wind.speed),
+      windDirection: await dataConversions.rounder(data.wind.deg),
+      pressure: await dataConversions.rounder(data.main.pressure),
+      time: now.toLocaleString('en-GB', { timeZone: 'UTC' }),
+    }
+    console.log(data);
+    await readingStore.addReading(station._id, autoReading);
+    console.log(`Generating automatic reading`);
     response.redirect("/station/" + station._id);
   },
   
