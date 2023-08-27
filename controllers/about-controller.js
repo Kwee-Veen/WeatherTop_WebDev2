@@ -1,5 +1,5 @@
 export const aboutController = {
-  index(request, response) {
+  async index(request, response) {
     const viewData = {
       title: "About Playlist",
     };

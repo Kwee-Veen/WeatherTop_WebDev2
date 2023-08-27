@@ -1,6 +1,7 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 import { readingStore } from "./reading-store.js";
+import { dataConversions } from "../utils/conversions.js";
 
 const db = initStore("stations");
 
@@ -15,6 +16,8 @@ export const stationStore = {
     const stationid =  v4();
     const station = await readingStore.addInitialLatestReading(inputStation, stationid);
     station._id = stationid;
+    station.latitude = await dataConversions.rounder(station.latitude);
+    station.longitude = await dataConversions.rounder(station.longitude);
     db.data.stations.push(station);
     await db.write();
     return station;

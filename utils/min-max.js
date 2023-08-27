@@ -1,8 +1,4 @@
 import { stationStore } from "../models/station-store.js";
-import { initStore } from "./store-utils.js";
-import { v4 } from "uuid";
-
-const db = initStore("stations");
 
 export const minMax = {
   
