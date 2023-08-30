@@ -33,3 +33,7 @@
 .pressure {
   color: darkorange;
 }
+
+#map {
+  height: 210px;
+}

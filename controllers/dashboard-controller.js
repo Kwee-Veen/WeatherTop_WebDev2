@@ -11,13 +11,24 @@ export const dashboardController = {
       await stationAnalytics.updateWeather(stations[i]._id); 
     }
     stations = await stationStore.getStationsByUserId(loggedInUser._id);
+    let coordinateArray = Array(stations.length);
+    for (let i = 0; i < stations.length; i++) {
+    let output = {
+        lat: stations[i].latitude,
+        long: stations[i].longitude,
+      };
+      coordinateArray[i] = output;
+    }
     const viewData = {
       title: "Station Dashboard",
       stations: stations,
+      coords: coordinateArray,
     };
     console.log("dashboard rendering");
+    console.log(viewData.coords);
     response.render("dashboard-view", viewData);
   },
+
 
   async addStation(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
