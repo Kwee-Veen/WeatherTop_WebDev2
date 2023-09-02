@@ -1,7 +1,6 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 import { stationStore } from "../models/station-store.js";
-import { stationAnalytics } from "../utils/station-analytics.js";
 import { dataConversions } from "../utils/conversions.js";
 import fetch from 'node-fetch';
 

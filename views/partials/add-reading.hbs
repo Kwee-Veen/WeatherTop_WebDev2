@@ -1,6 +1,6 @@
 
 {{#each station}}
-  <label class="label has-text-centered"><b>Add New Reading</b></label>
+  <label class="label is-medium has-text-centered"><b>Add New Reading</b></label>
   <div class = "columns is-full">
     <form class="column is-2" action="/station/{{_id}}/autogeneratereading" method="POST">
       <label class="label "><b>Automatic:</b></label>
@@ -17,7 +17,7 @@
           <div class="field">
             <div class="control">
               <div class="select">
-                <select class="input" name="code">
+                <select class="input is-danger" name="code">
                   <option value="100">Clear</option>
                   <option value="200">Partial Clouds</option>
                   <option value="300">Cloudy</option>
@@ -31,19 +31,19 @@
             </div>
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="Enter Temperature" name="temperature">
+            <input class="input is-rounded is-info" type="number" min="-273.15" step="0.01" placeholder="Temperature (°C)" name="temperature" required>
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="Enter Wind Speed" name="windspeed">
+            <input class="input is-rounded is-success" type="number" min="0" step="0.01" placeholder="Wind Speed (km/h)" name="windspeed" required>
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="Enter Wind Direction" name="winddirection">
+            <input class="input is-rounded is-success" type="number" min="0" max="360" step="0.01" placeholder="Wind Direction (°)" name="winddirection" required>
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
+            <input class="input is-rounded is-warning" type="number" min="0" step="0.01" placeholder="Pressure (hPa)" name="pressure" required>
           </div>
         </div>    
-        <button class="button is-primary">
+        <button class="button is-link">
           Add Reading
         </button>
       </div>

@@ -2,7 +2,6 @@ import { stationStore } from "../models/station-store.js";
 import { readingStore } from "../models/reading-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
 import { dataTrends } from "../utils/trends.js";
-import { dataConversions } from "../utils/conversions.js";
 
 
 export const stationController = {
@@ -28,11 +27,11 @@ export const stationController = {
     let station = await stationStore.getStationById(request.params.id);
     const now = new Date();
     const newReading = {
-      code: await dataConversions.rounder(Number(request.body.code)),
-      temperature: await dataConversions.rounder(Number(request.body.temperature)),
-      windSpeed: await dataConversions.rounder(Number(request.body.windspeed)),
-      windDirection: await dataConversions.rounder(Number(request.body.winddirection)),
-      pressure: await dataConversions.rounder(Number(request.body.pressure)),
+      code: Number(request.body.code),
+      temperature: Number(request.body.temperature),
+      windSpeed: Number(request.body.windspeed),
+      windDirection: Number(request.body.winddirection),
+      pressure: Number(request.body.pressure),
       time: now.toLocaleString('en-GB', { timeZone: 'UTC' }),
     };
     await readingStore.addReading(station._id, newReading);
