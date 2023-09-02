@@ -1,27 +1,31 @@
 <label class="label has-text-centered"><b>Temperature Forecast</b></label>
-<div class="box" id="chart"></div>
-<script>
-  const data = {
-    labels: [
-      {{#each trends.trendLabels}}
-        "{{this}}",
-      {{/each}}
-    ],
-    datasets: [
-      {
-        name: "Temperature", type: "line",
-        values: [
-          {{#each trends.tempTrend}}
-            {{this}},
+<div class="columns is-centered">  
+  <div class="column is-three-quarters">
+    <div class="box" id="chart"></div>
+    <script>
+      const data = {
+        labels: [
+          {{#each trends.trendLabels}}
+            "{{this}}",
           {{/each}}
+        ],
+        datasets: [
+          {
+            name: "°C", type: "line",
+            values: [
+              {{#each trends.tempTrend}}
+                {{this}},
+              {{/each}}
+            ]
+          }
         ]
       }
-    ]
-  }
-  new frappe.Chart("#chart", {
-    data: data,
-    type: "line",
-    height: 180,
-    colors: ["blue"]
-  });
-</script>
+      new frappe.Chart("#chart", {
+        data: data,
+        type: "line",
+        height: 180,
+        colors: ["blue"]
+      });
+    </script>
+  </div>
+</div>

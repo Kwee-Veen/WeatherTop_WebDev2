@@ -1,6 +1,9 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
+import { stationStore } from "../models/station-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
+import { dataConversions } from "../utils/conversions.js";
+import fetch from 'node-fetch';
 
 const db = initStore("readings");
 
@@ -36,6 +39,29 @@ export const readingStore = {
     db.data.readings.push(reading);
     await db.write();
     return station;
+  },
+  
+  async addAutoReading(stationid) {
+    let station = await stationStore.getStationById(stationid);
+    const now = new Date();
+    const lat = station.latitude;
+    const long = station.longitude;
+    const apiKey = "0c109ad6bb8a0b5d8a284ce6061f12c6";
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=` + lat + `&lon=` + long + `&appid=` + apiKey;
+    const search = await fetch(url);
+    const data = await search.json();
+    let autoReading = undefined;
+    if (data != undefined) {
+      autoReading = {
+      code: data.weather[0].id,
+      temperature: await dataConversions.rounder(data.main.temp-273.15),
+      windSpeed: await dataConversions.rounder(data.wind.speed),
+      windDirection: await dataConversions.rounder(data.wind.deg),
+      pressure: await dataConversions.rounder(data.main.pressure),
+      time: now.toLocaleString('en-GB', { timeZone: 'UTC' }),
+      }
+    }
+    await readingStore.addReading(station._id, autoReading); 
   },
   
   async getReadingsByStationId(id) {
