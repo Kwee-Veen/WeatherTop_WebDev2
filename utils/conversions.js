@@ -1,4 +1,5 @@
 export const dataConversions = {
+  
   async windSpeedToBeaufort(windSpeed) {
     let beaufort = 0;
     if (windSpeed < 1) {

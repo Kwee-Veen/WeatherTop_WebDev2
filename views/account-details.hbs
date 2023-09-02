@@ -2,72 +2,75 @@
 
 <section class="content box">
   <div class="columns is-centered">
-    <div class="column is-4">
+    <div class="column is-5">
       <form action="/modifyaccount" method="POST">
-        <h2 class="subtitle has-text-centered">
-          Current Account Details
-        </h2>
-        <div class="columns is-multiline">
-          <div class="column is-3">
-            First Name:
-          </div>
-          <div class="column is-3">
-            {{user.firstname}}
-          </div>
-          <div class="column is-3">
-            Surname:
-          </div>
-          <div class="column is-3">
-            {{user.surname}}
-          </div>
-          <div class="column is-3">
-            Email:
-          </div>
-          <div class="column is-3">
-            {{user.email}}
-          </div>
-          <div class="column is-3">
-            Password:
-          </div>
-          <div class="column is-3">
-            {{user.password}}
-          </div>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Modify Account Details
-        </h2>
-        <div class="field is-horizontal field-body has-text-centered">
-          <div class="field">
-            <label class="label">First Name:</label>
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="John" name="firstname">
-            </p>
-          </div>
-          <div class="field">
-            <label class="label">Surname:</label>
-            <p class="control">
-              <input class="input" type="text" placeholder="Smith" name="surname">
-            </p>
+        <div class="box has-background-success-light">
+          <h2 class="subtitle has-text-centered">
+            Current Details
+          </h2>
+          <div class="columns is-multiline">
+            <div class="column is-3">
+              First Name:
+            </div>
+            <div class="column is-3">
+              {{user.firstname}}
+            </div>
+            <div class="column is-3">
+              Surname:
+            </div>
+            <div class="column is-3">
+              {{user.surname}}
+            </div>
+            <div class="column is-3">
+              Email:
+            </div>
+            <div class="column is-3">
+              {{user.email}}
+            </div>
+            <div class="column is-3">
+              Password:
+            </div>
+            <div class="column is-3">
+              {{user.password}}
+            </div>
           </div>
         </div>
-        <div class="field is-horizontal field-body has-text-centered">
-          <div class="field">
-            <label class="label">Email:</label>
-            <input class="input" placeholder="test@test.com" name="email">
+        <div class="box has-background-danger-light">    
+          <h2 class="subtitle has-text-centered">
+            Modify Details
+          </h2>
+          <div class="field is-horizontal field-body has-text-centered">
+            <div class="field">
+              <label class="label">First Name:</label>
+              <p class="control is-expanded">
+                <input class="input is-rounded" type="text" placeholder="John" name="firstname" required>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Surname:</label>
+              <p class="control">
+                <input class="input is-rounded" type="text" placeholder="Smith" name="surname" required>
+              </p>
+            </div>
           </div>
-          <div class="field">
-            <label class="label">Password:</label>
-            <input class="input" placeholder="test" type="password" name="password">
+          <div class="field is-horizontal field-body has-text-centered">
+            <div class="field">
+              <label class="label">Email:</label>
+              <input class="input is-rounded" type="text" placeholder="test@test.com" name="email" required>
+            </div>
+            <div class="field">
+              <label class="label">Password:</label>
+              <input class="input is-rounded" type="password" placeholder="test" name="password" required>
+            </div>
           </div>
-        </div>
-        <div class="columns is-centered">
-          <div class="column is-narrow">
-            <button class="button is-link is-info">Modify</button>
+          <div class="columns is-centered">
+            <div class="column is-narrow">
+              <button class="button is-link is-danger">Modify</button>
+            </div>
           </div>
         </div>
       </form>
     </div>
-    <div class="column is-1"></div>
     <div class="column is-5">
       <section class="box">
         <figure class="image is-square">

@@ -32,36 +32,6 @@
       "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
     },
     {
-      "code": 800,
-      "temperature": 26.89,
-      "windSpeed": 0.38,
-      "windDirection": 355,
-      "pressure": 1008,
-      "time": "27/08/2023, 21:05:08",
-      "_id": "c49a7900-5f52-43a7-a031-cc9f34bc8024",
-      "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
-    },
-    {
-      "code": 803,
-      "temperature": 7.02,
-      "windSpeed": 4.12,
-      "windDirection": 260,
-      "pressure": 1012,
-      "time": "27/08/2023, 21:05:46",
-      "_id": "65e8d852-08b7-48a5-9f4a-10ca7d4a5cc5",
-      "stationid": "fbd0fa8a-7c9f-442f-b434-7bb9d821caec"
-    },
-    {
-      "code": 500,
-      "temperature": 18.23,
-      "windSpeed": 2.02,
-      "windDirection": 32,
-      "pressure": 1011,
-      "time": "27/08/2023, 21:05:52",
-      "_id": "8c076d25-4399-4305-8a24-23b4b3909eee",
-      "stationid": "944b68d7-812d-48e1-96f1-096f4ba0d999"
-    },
-    {
       "code": 500,
       "temperature": 18.59,
       "windSpeed": 1.94,
@@ -70,26 +40,6 @@
       "time": "27/08/2023, 22:36:12",
       "_id": "b61a2e67-a8bc-4d2c-9db4-277a26a7041a",
       "stationid": "944b68d7-812d-48e1-96f1-096f4ba0d999"
-    },
-    {
-      "code": 300,
-      "temperature": 8.02,
-      "windSpeed": 3.6,
-      "windDirection": 250,
-      "pressure": 1012,
-      "time": "27/08/2023, 22:36:26",
-      "_id": "189d84b7-924d-450b-b0f8-3596ea9439d9",
-      "stationid": "fbd0fa8a-7c9f-442f-b434-7bb9d821caec"
-    },
-    {
-      "code": 800,
-      "temperature": 27.89,
-      "windSpeed": 0.25,
-      "windDirection": 147,
-      "pressure": 1009,
-      "time": "27/08/2023, 22:36:35",
-      "_id": "086659c9-f034-404e-ba13-30b5ee9b4333",
-      "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
     },
     {
       "code": 800,
@@ -152,24 +102,64 @@
       "stationid": "944b68d7-812d-48e1-96f1-096f4ba0d999"
     },
     {
-      "code": 802,
-      "temperature": 22.9,
-      "windSpeed": 0.78,
-      "windDirection": 324,
-      "pressure": 1011,
-      "time": "02/09/2023, 09:46:40",
-      "_id": "9856b2c4-6a96-4753-831f-2d7cb38b725c",
+      "code": 803,
+      "temperature": 7.02,
+      "windSpeed": 3.09,
+      "windDirection": 220,
+      "pressure": 1019,
+      "time": "02/09/2023, 14:26:44",
+      "_id": "beb4f0bc-8d76-4b0f-afb8-e1515237a4cc",
+      "stationid": "fbd0fa8a-7c9f-442f-b434-7bb9d821caec"
+    },
+    {
+      "code": 804,
+      "temperature": 19.02,
+      "windSpeed": 1.43,
+      "windDirection": 83,
+      "pressure": 1013,
+      "time": "02/09/2023, 18:12:19",
+      "_id": "e0c3f9a3-6e87-48ec-bbe8-a6126a6f28c0",
       "stationid": "944b68d7-812d-48e1-96f1-096f4ba0d999"
     },
     {
+      "code": 804,
+      "temperature": 24.46,
+      "windSpeed": 1.61,
+      "windDirection": 16,
+      "pressure": 1013,
+      "time": "02/09/2023, 18:12:32",
+      "_id": "d2e4bb58-eb20-4f09-a321-d049ecec943e",
+      "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
+    },
+    {
       "code": 803,
-      "temperature": 7.02,
-      "windSpeed": 4.12,
-      "windDirection": 190,
-      "pressure": 1019,
-      "time": "02/09/2023, 09:47:53",
-      "_id": "01b88800-225a-478a-9d93-fe91c8ed1952",
+      "temperature": 6.02,
+      "windSpeed": 0.51,
+      "windDirection": 0,
+      "pressure": 1018,
+      "time": "02/09/2023, 19:52:01",
+      "_id": "af7b10f0-5bec-4288-9517-6b8a1a4c5cb0",
       "stationid": "fbd0fa8a-7c9f-442f-b434-7bb9d821caec"
+    },
+    {
+      "code": 803,
+      "temperature": 25.89,
+      "windSpeed": 1.59,
+      "windDirection": 31,
+      "pressure": 1013,
+      "time": "02/09/2023, 19:52:23",
+      "_id": "a03b7b0e-bb72-40fd-8018-bda48f3ad649",
+      "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
+    },
+    {
+      "code": 100,
+      "temperature": 26.68,
+      "windSpeed": 5,
+      "windDirection": 11,
+      "pressure": 1015,
+      "time": "02/09/2023, 19:53:00",
+      "_id": "680be5aa-6f54-4384-9ddd-f07cf24d87e4",
+      "stationid": "3d730470-49de-4c54-8441-48efce0616a7"
     }
   ]
 }

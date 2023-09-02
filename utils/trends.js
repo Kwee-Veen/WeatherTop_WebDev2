@@ -35,10 +35,10 @@ export const dataTrends = {
         windTrend: "",
         pressureTrend: ""
       }
+    
     if (station.readings.length < 3) {
       return results
     }
-    
     let readings = Array(3);
     for (let i = 0; i < readings.length; i++) {
       readings[i] = station.readings[i];
@@ -47,8 +47,8 @@ export const dataTrends = {
       readings[0] = readings[1];
       readings[1] = readings[2];
       readings[2] = station.readings[i];
-    }
-        
+    } 
+    
     if ((readings[0].temperature < readings[1].temperature) && (readings[1].temperature < readings[2].temperature))
       results.tempTrend = upTrend;
     else if ((readings[0].temperature > readings[1].temperature) && (readings[1].temperature > readings[2].temperature))
@@ -66,5 +66,4 @@ export const dataTrends = {
     
     return results;
   }
-  
 }

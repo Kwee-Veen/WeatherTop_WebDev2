@@ -1,7 +1,6 @@
 import { userStore } from "../models/user-store.js";
 import { accountsController } from "./accounts-controller.js";
 
-
 export const modifyAccountsController = {
   async index (request, response) {
     const user = await accountsController.getLoggedInUser(request);

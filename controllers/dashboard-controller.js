@@ -1,7 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
-import { dataConversions } from "../utils/conversions.js";
 
 export const dashboardController = {
   
@@ -25,8 +24,8 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const newStation = {
       title: request.body.title,
-      latitude: await dataConversions.rounder(request.body.latitude),
-      longitude: await dataConversions.rounder(request.body.longitude),
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
       userid: loggedInUser._id,
     };
     console.log(`adding station ${newStation.title}`);

@@ -25,3 +25,5 @@ router.post("/station/:id/autogeneratereading", stationController.autoGenerateRe
 router.get("/station/:stationid/deletereading/:readingid", stationController.deleteReading)
 router.get("/accountdetails", modifyAccountsController.index);
 router.post("/modifyaccount", modifyAccountsController.modifyAccount);
+//catch all
+router.get("*", indexController.index);
