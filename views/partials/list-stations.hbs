@@ -1,22 +1,22 @@
 {{#each stations}}
 
 {{> data-overview}}
-  <div class="box box-link-hover-shadow">
+<!--   <div class="box box-link-hover-shadow"> -->
     <div class="columns">
       <div class="column is-5">
       </div>
       <div class="column">
-        <a href="/station/{{_id}}" class="button">
+        <a href="/station/{{_id}}" class="button is-large">
           {{> icons/open }}
         </a>
       </div>
       <div class="column">
-        <a href="/dashboard/deletestation/{{_id}}" class="button">
+        <a href="/dashboard/deletestation/{{_id}}" class="button is-large">
           {{> icons/bin }}
         </a>
       </div>
       <div class="column is-5">
       </div>
     </div>
-  </div>
+<!--   </div> -->
 {{/each}}

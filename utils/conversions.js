@@ -34,7 +34,7 @@ export const dataConversions = {
   },
   
   async celsiusToFahrenheit(celsius) {
-    return (((celsius * 9) / 5) + 32);
+    return await dataConversions.rounder((((celsius * 9) / 5) + 32));
   },
   
    async getWindDirection(windDirectionDegrees) {
@@ -76,56 +76,9 @@ export const dataConversions = {
   },
   
   async getWindChill(temperature, windSpeed) {
-    return Math.round((13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * (Math.pow(windSpeed, 0.16)))) * 100) / 100;
+    return await dataConversions.rounder((13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * (Math.pow(windSpeed, 0.16)))));
   },
-  // async getWeather(code) {
-  //   switch (code) {
-  //     case 100:
-  //       return {
-  //         weather: "Clear",
-  //         icon: `solar:sun-bold-duotone`,
-  //       }
-  //     case 200:
-  //       return {
-  //         weather: "Partial Clouds",
-  //         icon: "ph:cloud-sun",
-  //       }
-  //     case 300:
-  //       return {
-  //         weather: "Cloudy",
-  //         icon: "solar:cloud-line-duotone",
-  //       }
-  //     case 400:
-  //       return {
-  //         weather: "Light Rain",
-  //         icon: "wi:rain-wind",
-  //       }
-  //     case 500:
-  //       return {
-  //         weather: "Heavy Shower",
-  //         icon: "bi:cloud-rain-fill",
-  //       }
-  //     case 600:
-  //       return {
-  //         weather: "Rain",
-  //         icon: "carbon:rain",
-  //       }
-  //     case 700:
-  //       return {
-  //         weather: "Snow",
-  //         icon: "wpf:snow",
-  //       }
-  //     case 800:
-  //       return {
-  //         weather: "Thunder",
-  //         icon: "mdi:weather-thunder",
-  //       }
-  //     default:
-  //       return {
-  //         weather: "Weather Unknown",
-  //         icon: "ps:radio-empty",
-  //       }
-  //   }
+
   async getWeather(code) {
     switch (code) {
       case 100:

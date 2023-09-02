@@ -1,6 +1,7 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
+import { dataConversions } from "../utils/conversions.js";
 
 export const dashboardController = {
   
@@ -11,21 +12,11 @@ export const dashboardController = {
       await stationAnalytics.updateWeather(stations[i]._id); 
     }
     stations = await stationStore.getStationsByUserId(loggedInUser._id);
-    let coordinateArray = Array(stations.length);
-    for (let i = 0; i < stations.length; i++) {
-    let output = {
-        lat: stations[i].latitude,
-        long: stations[i].longitude,
-      };
-      coordinateArray[i] = output;
-    }
     const viewData = {
       title: "Station Dashboard",
       stations: stations,
-      coords: coordinateArray,
     };
     console.log("dashboard rendering");
-    console.log(viewData.coords);
     response.render("dashboard-view", viewData);
   },
 
@@ -34,8 +25,8 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const newStation = {
       title: request.body.title,
-      latitude: request.body.latitude,
-      longitude: request.body.longitude,
+      latitude: await dataConversions.rounder(request.body.latitude),
+      longitude: await dataConversions.rounder(request.body.longitude),
       userid: loggedInUser._id,
     };
     console.log(`adding station ${newStation.title}`);
